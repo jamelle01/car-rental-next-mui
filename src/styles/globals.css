@@ -28,3 +28,36 @@ code:not([class*='language-']):after {
 code[class*='language-'] {
   padding: 0;
 }
+
+/* CSS to customize the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5; /* Replace with your desired background color */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FF8A65; /* Replace with your desired scrollbar color */
+  border-radius: 5px; /* Adjust the border-radius to your desired value for rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #E64A19; /* Replace with your desired hover color */
+  border-radius: 5px; /* Adjust the border-radius to your desired value for rounded corners */
+}
+
+/* For Firefox */
+/* You can add more specific styling for Firefox if needed */
+scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+scrollbar-thumb {
+  background-color: #FF8A65;
+  border-radius: 5px;
+}
+
+scrollbar-thumb:hover {
+  background-color: #E64A19;
+  border-radius: 5px;
+}

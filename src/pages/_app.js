@@ -1,6 +1,6 @@
 import ResponsiveAppBar from "@/components/Navbar";
 import "@/styles/globals.css";
-import ThemeProvider from "@mui/material/styles/ThemeProvider";
+import { ThemeProvider } from '@mui/material/styles';
 import theme from "@/styles/theme";
 
 export default function App({ Component, pageProps }) {

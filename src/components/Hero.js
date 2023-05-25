@@ -1,4 +1,4 @@
-import { Container, Box, Grid } from "@mui/material";
+import { Container, Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
@@ -13,31 +13,78 @@ const Hero = () => {
         height: "100vh",
       }}
     >
-      <div>
-        <img
-          src="/images/hero/hero-bg.png"
-          style={{
-            position: "absolute",
-            right: 0,
-            width: "50%",
-            // width: isMobileView ? "auto" : "70%", // Adjust the width based on isMobileView
-            height: "auto", // Make the height auto to maintain aspect ratio
-            display: isMobileView ? "none" : "block",
+      <Grid container>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: isMobileView ? "center" : "flex-start",
+            height: "80vh",
           }}
-        />
-        <img
-          src="../images/hero/main-car.png"
-          style={{
-            position: "absolute",
-            right: 0,
-            width: isMobileView ? "auto" : "60%",
-            height: "auto",
-            display: isMobileView ? "none" : "block",
-            top: "50%",
-            transform: "translateY(-40%)",
-          }}
-        />
-      </div>
+        >
+          <Box>
+            <Typography
+              variant="h5"
+              sx={{
+                fontWeight: "bolder",
+                textAlign: isMobileView ? "center" : "left",
+              }}
+            >
+              Plan your trip now
+            </Typography>
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: "bolder",
+                textAlign: isMobileView ? "center" : "left",
+              }}
+            >
+              Save <span style={{ color: "#FF5722" }}>big</span> with our car
+              rental
+            </Typography>
+            <Typography
+              variant="subtitle2"
+              gutterBottom
+              sx={{
+                fontWeight: "bolder",
+                textAlign: isMobileView ? "center" : "left",
+              }}
+            >
+              Rent the car of your dreams. Unbeatable prices, unlimited miles,
+              flexible pick-up options and much more.
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <img
+            src="/images/hero/hero-bg.png"
+            style={{
+              position: "absolute",
+              right: 0,
+              width: "50%",
+              height: "auto",
+              display: isMobileView ? "none" : "block",
+              borderRadius: "8px",
+            }}
+          />
+          <img
+            src="../images/hero/main-car.png"
+            style={{
+              position: "absolute",
+              right: 0,
+              width: isMobileView ? "auto" : "55%",
+              height: "auto",
+              display: isMobileView ? "none" : "block",
+              top: "50%",
+              transform: "translateY(-30%)",
+              borderRadius: "8px",
+            }}
+          />
+        </Grid>
+      </Grid>
     </Container>
   );
 };

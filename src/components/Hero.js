@@ -1,4 +1,4 @@
-import { Container, Box, Grid, Typography } from "@mui/material";
+import { Container, Box, Grid, Typography, Button } from "@mui/material";
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
@@ -56,6 +56,14 @@ const Hero = () => {
               Rent the car of your dreams. Unbeatable prices, unlimited miles,
               flexible pick-up options and much more.
             </Typography>
+            <Grid container spacing={2}>
+              <Grid item>
+                <Button variant="contained">Book Ride</Button>
+              </Grid>
+              <Grid item>
+                <Button variant="outlined">Learn More</Button>
+              </Grid>
+            </Grid>
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -68,6 +76,7 @@ const Hero = () => {
               height: "auto",
               display: isMobileView ? "none" : "block",
               borderRadius: "8px",
+              top: "5%",
             }}
           />
           <img

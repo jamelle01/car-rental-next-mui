@@ -23,7 +23,6 @@ const Hero = () => {
         sx={{
           display: "flex",
           justifyContent: isMobileView ? "center" : "flex-start",
-          height: "80vh",
           zIndex: 1,
         }}
       >

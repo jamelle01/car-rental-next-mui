@@ -15,7 +15,7 @@ const Hero = () => {
   const isMobileView = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Grid container>
+    <Grid container paddingBottom={15}>
       <Grid
         item
         xs={12}
@@ -120,6 +120,7 @@ const Hero = () => {
             display: isMobileView ? "none" : "block",
             borderRadius: "8px",
             top: "5%",
+            zIndex: -1,
           }}
           alt="Hero Background"
         />
@@ -134,6 +135,7 @@ const Hero = () => {
             top: "30%",
             // transform: "translateY(-30%)",
             borderRadius: "8px",
+            zIndex: -1,
           }}
           alt="Main Car"
         />

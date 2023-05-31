@@ -13,13 +13,15 @@ import Typography from "@mui/material/Typography";
 
 import { useState } from "react";
 
+const currentDate = new Date().toISOString().split("T")[0];
+
 const BookCar = () => {
   // booking car
   const [carType, setCarType] = useState("");
   const [pickUp, setPickUp] = useState("");
   const [dropOff, setDropOff] = useState("");
-  const [pickTime, setPickTime] = useState("");
-  const [dropTime, setDropTime] = useState("");
+  const [checkInDate, setCheckInDate] = useState("");
+  const [checkOutDate, setCheckOutDate] = useState("");
   const [carImg, setCarImg] = useState("");
 
   return (
@@ -75,6 +77,11 @@ const BookCar = () => {
               InputLabelProps={{
                 shrink: true,
               }}
+              inputProps={{
+                min: currentDate,
+              }}
+              value={checkInDate}
+              onChange={(e) => setCheckInDate(e.target.value)}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
@@ -86,6 +93,11 @@ const BookCar = () => {
               InputLabelProps={{
                 shrink: true,
               }}
+              inputProps={{
+                min: checkInDate || currentDate,
+              }}
+              value={checkOutDate}
+              onChange={(e) => setCheckOutDate(e.target.value)}
             />
           </Grid>
 

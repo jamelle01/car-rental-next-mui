@@ -12,6 +12,7 @@ import ConfirmationNumberRoundedIcon from "@mui/icons-material/ConfirmationNumbe
 import Typography from "@mui/material/Typography";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const currentDate = new Date().toISOString().split("T")[0];
 
@@ -25,8 +26,20 @@ const BookCar = () => {
   const [carImg, setCarImg] = useState("");
 
   return (
-    <Paper elevation={3}>
-      <Box sx={{ p: 2 }}>
+    <Paper
+      elevation={6}
+      sx={{
+        backgroundImage: "url('images/book-car/book-bg.png')",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        // filter: "brightness(.99)",
+      }}
+    >
+      <Box p={4}>
+        <Typography variant="h4" mb sx={{ fontWeight: "bold" }}>
+          Book a car
+        </Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={4}>
             <TextField

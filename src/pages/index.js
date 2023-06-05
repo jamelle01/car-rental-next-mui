@@ -5,6 +5,7 @@ import ResponsiveAppBar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import { Container } from "@mui/material";
 import BookCar from "@/components/BookCar";
+import PlanTrip from "@/components/PlanTrip";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function Home() {
       </Head>
       <Hero />
       <BookCar />
+      <PlanTrip />
     </Container>
   );
 }

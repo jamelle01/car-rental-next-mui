@@ -1,11 +1,15 @@
-import { Box } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 
 const PlanTrip = () => {
   return (
     <Box
+      mb
+      mt={10}
       sx={{
-        width: 300,
-        height: 300,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+
         backgroundColor: "primary.dark",
         "&:hover": {
           backgroundColor: "primary.main",
@@ -13,7 +17,14 @@ const PlanTrip = () => {
         },
       }}
     >
-      feij
+      <Grid item xs={12}>
+        <Typography variant="h5" align="center">
+          Plan your trip now
+        </Typography>
+        <Typography fontWeight={"bolder"} variant="h3" align="center">
+          Quick &amp; easy car rental
+        </Typography>
+      </Grid>
     </Box>
   );
 };

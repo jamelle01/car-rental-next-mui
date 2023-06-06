@@ -7,6 +7,7 @@ import { Container } from "@mui/material";
 import BookCar from "@/components/BookCar";
 import PlanTrip from "@/components/PlanTrip";
 import CarModels from "@/components/CarModels";
+import Banner from "@/components/Banner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function Home() {
       <BookCar />
       <PlanTrip />
       <CarModels />
+      <Banner />
     </Container>
   );
 }

@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import { Container } from "@mui/material";
 import BookCar from "@/components/BookCar";
 import PlanTrip from "@/components/PlanTrip";
+import CarModels from "@/components/CarModels";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Hero />
       <BookCar />
       <PlanTrip />
+      <CarModels />
     </Container>
   );
 }

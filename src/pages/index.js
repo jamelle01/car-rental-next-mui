@@ -8,6 +8,7 @@ import BookCar from "@/components/BookCar";
 import PlanTrip from "@/components/PlanTrip";
 import CarModels from "@/components/CarModels";
 import Banner from "@/components/Banner";
+import ChooseUs from "@/components/ChooseUs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function Home() {
       <PlanTrip />
       <CarModels />
       <Banner />
+      <ChooseUs />
     </Container>
   );
 }

@@ -4,9 +4,11 @@ const ChooseUs = () => {
   return (
     <Grid spacing={8} container>
       <Grid item xs={12}>
-        <img alt="3 cars" />
+        <Box align="center">
+          <img alt="3 cars" src="\images\chooseUs\main.png" />
+        </Box>
       </Grid>
-      <Grid item md={7}>
+      <Grid item md={6}>
         <Typography fontWeight="bold" variant="h5" sx={{ mb: 2 }}>
           Why Choose Us
         </Typography>
@@ -21,34 +23,49 @@ const ChooseUs = () => {
           experience, so don't miss out on your chance to save big.
         </Typography>
       </Grid>
-      <Grid item md={5}>
-        <Box>
-          <Typography fontWeight="bold" variant="h4" sx={{ mb: 1 }}>
-            Cross Country Drive
-          </Typography>
-          <Typography color="gray" variant="body1" sx={{ mb: 4 }}>
-            Take your driving experience to the next level with our top-notch
-            vehicles for your cross-country adventures.
-          </Typography>
-        </Box>
-        <Box>
-          <Typography fontWeight="bold" variant="h4" sx={{ mb: 1 }}>
-            All Inclusive Pricing
-          </Typography>
-          <Typography color="gray" variant="body1" sx={{ mb: 4 }}>
-            Get everything you need in one convenient, transparent price with
-            our all-inclusive pricing policy.
-          </Typography>
-        </Box>
-        <Box>
-          <Typography fontWeight="bold" variant="h4" sx={{ mb: 1 }}>
-            No Hidden Charges
-          </Typography>
-          <Typography color="gray" variant="body1" sx={{ mb: 4 }}>
-            Enjoy peace of mind with our no hidden charges policy. We believe in
-            transparent and honest pricing.
-          </Typography>
-        </Box>
+      <Grid item md={6}>
+        <Grid container>
+          <Grid item md={3} xs={12}>
+            <img alt="logo" />
+          </Grid>
+          <Grid item md={9} xs={12}>
+            <Typography fontWeight="bold" variant="h4" sx={{ mb: 1 }}>
+              Cross Country Drive
+            </Typography>
+            <Typography color="gray" variant="body1" sx={{ mb: 4 }}>
+              Take your driving experience to the next level with our top-notch
+              vehicles for your cross-country adventures.
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid container>
+          <Grid item md={3} xs={12}>
+            <img alt="logo" />
+          </Grid>
+          <Grid item md={9} xs={12}>
+            <Typography fontWeight="bold" variant="h4" sx={{ mb: 1 }}>
+              All Inclusive Pricing
+            </Typography>
+            <Typography color="gray" variant="body1" sx={{ mb: 4 }}>
+              Get everything you need in one convenient, transparent price with
+              our all-inclusive pricing policy.
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid container>
+          <Grid item md={3} xs={12}>
+            <img alt="logo" />
+          </Grid>
+          <Grid item md={9} xs={12}>
+            <Typography fontWeight="bold" variant="h4" sx={{ mb: 1 }}>
+              No Hidden Charges
+            </Typography>
+            <Typography color="gray" variant="body1" sx={{ mb: 4 }}>
+              Enjoy peace of mind with our no hidden charges policy. We believe
+              in transparent and honest pricing.
+            </Typography>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );

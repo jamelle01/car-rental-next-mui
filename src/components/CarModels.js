@@ -38,7 +38,14 @@ const CarModels = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} md={3}>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 1,
+              mx: { xs: "20px", sm: "100px", md: 0 },
+            }}
+          >
             <Button variant="outlined" size="large">
               Button 1
             </Button>
@@ -59,136 +66,142 @@ const CarModels = () => {
             </Button>
           </Box>
         </Grid>
+
         <Grid item xs={12} md={6}>
-          <Box align="center">
-            <img alt="hello " src="\images\cars-big\audia1.jpg"/>
+          <Box display="flex" justifyContent="center">
+            <img
+              alt="hello"
+              src="/images/cars-big/audia1.jpg"
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
           </Box>
-          
         </Grid>
         <Grid item xs={12} md={3}>
-          <TableContainer component={Paper} elevation={6}>
-            <Table size="small" aria-label="a dense table">
-              <TableHead>
-                <TableRow>
-                  <TableCell
-                    component="th"
-                    sx={{
-                      backgroundColor: "primary.main",
-                      color: "primary.contrastText",
-                    }}
-                    align="center"
-                    colSpan={2}
-                  >
-                    $45 / rent per day
-                  </TableCell>
-                </TableRow>
-              </TableHead>
+          <Box sx={{ mx: { xs: "20px", sm: "100px", md: 0 } }}>
+            <TableContainer component={Paper} elevation={6}>
+              <Table size="small" aria-label="a dense table">
+                <TableHead>
+                  <TableRow>
+                    <TableCell
+                      component="th"
+                      sx={{
+                        backgroundColor: "primary.main",
+                        color: "primary.contrastText",
+                      }}
+                      align="center"
+                      colSpan={2}
+                    >
+                      $45 / rent per day
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
 
-              <TableBody>
-                <TableRow>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    Model
-                  </TableCell>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    Model
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    Mark
-                  </TableCell>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    Mark
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    Year
-                  </TableCell>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    Year
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    Doors
-                  </TableCell>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    Doors
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    AC
-                  </TableCell>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    AC
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    Transmission
-                  </TableCell>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    Transmission
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    Fuel
-                  </TableCell>
-                  <TableCell
-                    align="center"
-                    sx={{ borderRight: "1px  solid lightgray" }}
-                  >
-                    Fuel
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <Button fullWidth sx={{ marginTop: 1 }} variant="contained">
-            Button 1
-          </Button>
+                <TableBody>
+                  <TableRow>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      Model
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      Model
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      Mark
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      Mark
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      Year
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      Year
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      Doors
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      Doors
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      AC
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      AC
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      Transmission
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      Transmission
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      Fuel
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      sx={{ borderRight: "1px solid lightgray" }}
+                    >
+                      Fuel
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
+            <Button fullWidth sx={{ marginTop: 1 }} variant="contained">
+              Button 1
+            </Button>
+          </Box>
         </Grid>
       </Grid>
     </Box>

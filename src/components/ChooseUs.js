@@ -2,10 +2,14 @@ import { Box, Grid, Typography } from "@mui/material";
 
 const ChooseUs = () => {
   return (
-    <Grid spacing={8} container>
+    <Grid spacing={8} container sx={{ textAlign: { xs: "center", md: "left" } }}>
       <Grid item xs={12}>
         <Box align="center">
-          <img alt="3 cars" src="\images\chooseUs\main.png" />
+          <img
+            style={{ maxWidth: "100%", height: "auto" }}
+            alt="3 cars"
+            src="\images\chooseUs\main.png"
+          />
         </Box>
       </Grid>
       <Grid item md={6}>
@@ -25,10 +29,29 @@ const ChooseUs = () => {
       </Grid>
       <Grid item md={6}>
         <Grid container>
-          <Grid item md={3} xs={12}>
-            <img alt="logo" />
+          <Grid
+            item
+            md={3}
+            xs={12}
+            sx={{
+              display: "flex",
+              justifyContent: { xs: "center", md: "flex-start" },
+              alignItems: "center",
+            }}
+          >
+            <img alt="logo" src="\images\chooseUs\icon1.png" />
           </Grid>
-          <Grid item md={9} xs={12}>
+          <Grid
+            item
+            md={9}
+            xs={12}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: { xs: "center", md: "flex-start" },
+              alignItems: { xs: "center", md: "flex-start" },
+            }}
+          >
             <Typography fontWeight="bold" variant="h4" sx={{ mb: 1 }}>
               Cross Country Drive
             </Typography>
@@ -38,11 +61,31 @@ const ChooseUs = () => {
             </Typography>
           </Grid>
         </Grid>
+
         <Grid container>
-          <Grid item md={3} xs={12}>
-            <img alt="logo" />
+          <Grid
+            item
+            md={3}
+            xs={12}
+            sx={{
+              display: "flex",
+              justifyContent: { xs: "center", md: "flex-start" },
+              alignItems: "center",
+            }}
+          >
+            <img alt="logo" src="\images\chooseUs\icon2.png" />
           </Grid>
-          <Grid item md={9} xs={12}>
+          <Grid
+            item
+            md={9}
+            xs={12}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: { xs: "center", md: "flex-start" },
+              alignItems: { xs: "center", md: "flex-start" },
+            }}
+          >
             <Typography fontWeight="bold" variant="h4" sx={{ mb: 1 }}>
               All Inclusive Pricing
             </Typography>
@@ -52,11 +95,31 @@ const ChooseUs = () => {
             </Typography>
           </Grid>
         </Grid>
+
         <Grid container>
-          <Grid item md={3} xs={12}>
-            <img alt="logo" />
+          <Grid
+            item
+            md={3}
+            xs={12}
+            sx={{
+              display: "flex",
+              justifyContent: { xs: "center", md: "flex-start" },
+              alignItems: "center",
+            }}
+          >
+            <img alt="logo" src="\images\chooseUs\icon3.png" />
           </Grid>
-          <Grid item md={9} xs={12}>
+          <Grid
+            item
+            md={9}
+            xs={12}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: { xs: "center", md: "flex-start" },
+              alignItems: { xs: "center", md: "flex-start" },
+            }}
+          >
             <Typography fontWeight="bold" variant="h4" sx={{ mb: 1 }}>
               No Hidden Charges
             </Typography>

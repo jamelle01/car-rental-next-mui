@@ -60,7 +60,10 @@ const CarModels = () => {
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <img alt="hello " />
+          <Box align="center">
+            <img alt="hello " src="\images\cars-big\audia1.jpg"/>
+          </Box>
+          
         </Grid>
         <Grid item xs={12} md={3}>
           <TableContainer component={Paper} elevation={6}>

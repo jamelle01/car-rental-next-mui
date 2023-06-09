@@ -1,8 +1,14 @@
-import { Box, Grid, Typography } from "@mui/material";
+import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import { Box, Button, Grid, Typography } from "@mui/material";
 
 const ChooseUs = () => {
   return (
-    <Grid spacing={8} container sx={{ textAlign: { xs: "center", md: "left" } }}>
+    <Grid
+      mb={20}
+      spacing={8}
+      container
+      sx={{ textAlign: { xs: "center", md: "left" } }}
+    >
       <Grid item xs={12}>
         <Box align="center">
           <img
@@ -12,20 +18,42 @@ const ChooseUs = () => {
           />
         </Box>
       </Grid>
-      <Grid item md={6}>
+      <Grid
+        item
+        md={6}
+        sx={{
+          backgroundImage: "url('images/chooseUs/bg.png')",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      >
         <Typography fontWeight="bold" variant="h5" sx={{ mb: 2 }}>
           Why Choose Us
         </Typography>
         <Typography fontWeight="bold" variant="h3" sx={{ mb: 2 }}>
           Best valued deals you will ever find
         </Typography>
-        <Typography color="gray" variant="body1" sx={{ mb: 4 }}>
+        <Typography color="gray" variant="body1" sx={{ mb: 2 }}>
           Discover the best deals you'll ever find with our unbeatable offers.
           We're dedicated to providing you with the best value for your money,
           so you can enjoy top-quality services and products without breaking
           the bank. Our deals are designed to give you the ultimate renting
           experience, so don't miss out on your chance to save big.
         </Typography>
+        <Button
+          size="large"
+          variant="contained"
+          endIcon={<ArrowForwardIosRoundedIcon />}
+          sx={{
+            height: "56px",
+            paddingTop: "8px",
+            paddingBottom: "8px",
+            paddingRight: "18px",
+          }}
+        >
+          Find Details
+        </Button>
       </Grid>
       <Grid item md={6}>
         <Grid container>

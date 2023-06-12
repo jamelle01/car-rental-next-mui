@@ -10,6 +10,7 @@ import CarModels from "@/components/home/CarModels";
 import Banner from "@/components/home/Banner";
 import ChooseUs from "@/components/home/ChooseUs";
 import Reviews from "@/components/home/Reviews";
+import Faq from "@/components/home/Faq";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function Home() {
       <Banner />
       <ChooseUs />
       <Reviews />
+      <Faq />
     </Container>
   );
 }

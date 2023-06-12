@@ -29,6 +29,7 @@ const Reviews = () => {
           <Typography
             m="auto"
             color="#777"
+            pt
             sx={{ maxWidth: "600px" }}
             variant="body1"
           >

@@ -15,7 +15,31 @@ const Download = () => {
   const isMobileView = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Grid container paddingBottom={15}>
+    <Grid
+      container
+      mb={10}
+      paddingBottom={15}
+      sx={
+        {
+          // backgroundImage: `url("/images/banners/bg02.png")`,
+          // backgroundRepeat: "no-repeat",
+          // backgroundSize: "cover",
+          // backgroundPosition: "right",
+        }
+      }
+    >
+      <img
+        src="/images/banners/bg02.png"
+        style={{
+          position: "absolute",
+          right: "-90px",
+          width: "90%",
+          display: isMobileView ? "none" : "block",
+          // top: "5%",
+          zIndex: -1,
+        }}
+        alt="Hero Background"
+      />
       <Grid
         item
         xs={12}
@@ -32,25 +56,14 @@ const Download = () => {
           }}
         >
           <Typography
-            variant="h5"
-            sx={{
-              paddingTop: isMobileView ? "16px" : "100px",
-              fontWeight: "bolder",
-              textAlign: isMobileView ? "center" : "left",
-            }}
-          >
-            Plan your trip now
-          </Typography>
-          <Typography
-            variant="h2"
+            variant="h3"
             sx={{
               paddingY: isMobileView ? "8px" : "16px",
               fontWeight: "bolder",
               textAlign: isMobileView ? "center" : "left",
             }}
           >
-            Save <span style={{ color: "#FF5722" }}>big</span> with our car
-            rental
+            Download our app to get most out of it
           </Typography>
           <Typography
             variant="subtitle2"
@@ -61,8 +74,9 @@ const Download = () => {
               color: "#777",
             }}
           >
-            Rent the car of your dreams. Unbeatable prices, unlimited miles,
-            flexible pick-up options and much more.
+            Thrown shy denote ten ladies though ask saw. Or by to he going think
+            order event music. Incommode so intention defective at convinced.
+            Led income months itself and houses you.
           </Typography>
           <Grid
             sx={{
@@ -74,60 +88,41 @@ const Download = () => {
             spacing={2}
           >
             <Grid item xs={10} md={6}>
-              <Button
-                fullWidth
-                variant="contained"
-                endIcon={<ConfirmationNumberRoundedIcon />}
-                sx={{
-                  height: "56px",
-                  paddingTop: "8px",
-                  paddingBottom: "8px",
-                }}
-              >
-                <Typography noWrap variant="button">
-                  Book Ride
-                </Typography>
-              </Button>
+              <img src="/images/download/appstore.svg" />
             </Grid>
             <Grid item xs={10} md={6}>
-              <Button
-                fullWidth
-                endIcon={<ArrowForwardIosRoundedIcon />}
-                sx={{
-                  height: "56px",
-                  paddingTop: "8px",
-                  paddingBottom: "8px",
-                }}
-                variant="outlined"
-              >
-                <Typography noWrap variant="button">
-                  Learn More
-                </Typography>
-              </Button>
+              <img src="/images/download/googleapp.svg" />
             </Grid>
           </Grid>
         </Box>
       </Grid>
 
-      <Grid item xs={12} md={6} sx={{ zindex: 2 }}>
-        <img
-          src="/images/hero/hero-bg.png"
+      <Grid
+        item
+        xs={12}
+        md={6}
+        sx={{
+          zIndex: 2,
+        }}
+      >
+        {/* <img
+          src="/images/banners/bg02.png"
           style={{
-            position: "absolute",
-            right: 0,
-            width: "50%",
-            height: "auto",
+            // position: "absolute",
+            // right: 0,
+            // width: "0%",
+            // height: "auto",
             display: isMobileView ? "none" : "block",
             borderRadius: "8px",
-            top: "5%",
+            // top: "5%",
             zIndex: -1,
           }}
           alt="Hero Background"
-        />
-        <img
+        /> */}
+        {/* <img
           src="../images/hero/main-car.png"
           style={{
-            position: "absolute",
+            // position: "absolute",
             right: 0,
             width: isMobileView ? "auto" : "53%",
             height: "auto",
@@ -138,7 +133,7 @@ const Download = () => {
             zIndex: -1,
           }}
           alt="Main Car"
-        />
+        /> */}
       </Grid>
     </Grid>
   );

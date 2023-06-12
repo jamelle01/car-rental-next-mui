@@ -79,7 +79,13 @@ const Faq = () => {
           Website: Answers to Common Concerns and Inquiries.
         </Typography>
       </Grid>
-      <Grid item xs={12} mx={30}>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          marginX: { xs: 5, lg: 20, md: 10 },
+        }}
+      >
         <div>
           <Accordion
             expanded={expanded === "panel1"}

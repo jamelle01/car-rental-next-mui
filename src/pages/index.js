@@ -9,6 +9,7 @@ import PlanTrip from "@/components/home/PlanTrip";
 import CarModels from "@/components/home/CarModels";
 import Banner from "@/components/home/Banner";
 import ChooseUs from "@/components/home/ChooseUs";
+import Reviews from "@/components/home/Reviews";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function Home() {
       <CarModels />
       <Banner />
       <ChooseUs />
+      <Reviews />
     </Container>
   );
 }

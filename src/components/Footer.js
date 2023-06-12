@@ -29,7 +29,7 @@ const Footer = () => {
           </Typography>
           <List>
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton sx={{ padding: 0 }}>
                 <ListItemIcon>
                   <CallIcon />
                 </ListItemIcon>
@@ -37,7 +37,7 @@ const Footer = () => {
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton sx={{ padding: 0 }}>
                 <ListItemIcon>
                   <DraftsIcon />
                 </ListItemIcon>

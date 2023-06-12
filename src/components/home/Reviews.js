@@ -11,7 +11,6 @@ const Reviews = () => {
   return (
     <Box
       mb={10}
-      mt={10}
       sx={{
         display: "flex",
         justifyContent: "center",
@@ -19,189 +18,150 @@ const Reviews = () => {
       }}
     >
       <Grid container spacing={3}>
-        <Grid item xs={12} textAlign="center">
+        <Grid mb={8} item xs={12} textAlign="center">
           <Typography fontWeight="bold" variant="h5">
-            Vehicle Models
+            Reviewed by People
           </Typography>
           <Typography fontWeight="bold" variant="h3">
-            Our rental fleet
+            Client's Testimonials
           </Typography>
 
           <Typography
             m="auto"
             color="#777"
-            sx={{ maxWidth: "500px" }}
+            sx={{ maxWidth: "600px" }}
             variant="body1"
           >
-            Choose from a variety of our amazing vehicles to rent for your next
-            adventure or business trip
+            Discover the positive impact we've made on the our clients by
+            reading through their testimonials. Our clients have experienced our
+            service and results, and they're eager to share their positive
+            experiences with you.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={3}>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 1,
-              mx: { xs: "20px", sm: "100px", md: 0 },
-            }}
-          >
-            <Button variant="outlined" size="large">
-              Button 1
-            </Button>
-            <Button variant="outlined" size="large">
-              Button 2
-            </Button>
-            <Button variant="outlined" size="large">
-              Button 3
-            </Button>
-            <Button variant="outlined" size="large">
-              Button 4
-            </Button>
-            <Button variant="outlined" size="large">
-              Button 5
-            </Button>
-            <Button variant="outlined" size="large">
-              Button 6
-            </Button>
-          </Box>
-        </Grid>
-
         <Grid item xs={12} md={6}>
-          <Box display="flex" justifyContent="center">
-            <img
-              alt="hello"
-              src="/images/cars-big/audia1.jpg"
-              style={{ maxWidth: "100%", height: "auto" }}
-            />
-          </Box>
+          <Paper sx={{ height: "100%" }} elevation={9}>
+            <Grid container p={5} spacing={2}>
+              <Grid xs={12} item>
+                <Typography variant="h6">
+                  "We rented a car from this website and had an amazing
+                  experience! The booking was easy and the rental rates were
+                  very affordable. "
+                </Typography>
+              </Grid>
+              <Grid
+                item
+                xs={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  alt="profile"
+                  style={{
+                    maxWidth: "70px",
+                    borderRadius: "90px",
+                    height: "auto",
+                  }}
+                  src="/images/testimonials/pfp1.jpg"
+                />
+              </Grid>
+              <Grid
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+                item
+                xs={7}
+              >
+                <div>
+                  <Typography variant="h5" fontWeight={"bold"}>
+                    Harry Poter
+                  </Typography>
+                  <Typography variant="subtitle2">Belgrade</Typography>
+                </div>
+              </Grid>
+              <Grid
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+                item
+                xs={3}
+              >
+                <Typography
+                  variant="h1"
+                  fontWeight={"bold"}
+                  color={"primary.main"}
+                >
+                  "
+                </Typography>
+              </Grid>
+            </Grid>
+          </Paper>
         </Grid>
-        <Grid item xs={12} md={3}>
-          <Box sx={{ mx: { xs: "20px", sm: "100px", md: 0 } }}>
-            <TableContainer component={Paper} elevation={6}>
-              <Table size="small" aria-label="a dense table">
-                <TableHead>
-                  <TableRow>
-                    <TableCell
-                      component="th"
-                      sx={{
-                        backgroundColor: "primary.main",
-                        color: "primary.contrastText",
-                      }}
-                      align="center"
-                      colSpan={2}
-                    >
-                      $45 / rent per day
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-
-                <TableBody>
-                  <TableRow>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      Model
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      Model
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      Mark
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      Mark
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      Year
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      Year
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      Doors
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      Doors
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      AC
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      AC
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      Transmission
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      Transmission
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      Fuel
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      sx={{ borderRight: "1px solid lightgray" }}
-                    >
-                      Fuel
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </TableContainer>
-            <Button fullWidth sx={{ marginTop: 1 }} variant="contained">
-              Button 1
-            </Button>
-          </Box>
+        <Grid item xs={12} md={6}>
+          <Paper sx={{ height: "100%" }} elevation={9}>
+            <Grid container p={5} spacing={2}>
+              <Grid xs={12} item>
+                <Typography variant="h6">
+                  "The car was in great condition and made our trip even better.
+                  Highly recommend for this car rental website!"
+                </Typography>
+              </Grid>
+              <Grid
+                item
+                xs={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  alt="profile"
+                  style={{
+                    maxWidth: "70px",
+                    borderRadius: "90px",
+                    height: "auto",
+                  }}
+                  src="/images/testimonials/pfp2.jpg"
+                />
+              </Grid>
+              <Grid
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+                item
+                xs={7}
+              >
+                <div>
+                  <Typography variant="h5" fontWeight={"bold"}>
+                    Ron Rizzly
+                  </Typography>
+                  <Typography variant="subtitle2">Novi Sad</Typography>
+                </div>
+              </Grid>
+              <Grid
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+                item
+                xs={3}
+              >
+                <Typography
+                  variant="h1"
+                  fontWeight={"bold"}
+                  color={"primary.main"}
+                >
+                  "
+                </Typography>
+              </Grid>
+            </Grid>
+          </Paper>
         </Grid>
       </Grid>
     </Box>

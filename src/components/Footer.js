@@ -1,4 +1,11 @@
-import { Typography, Grid, Container, Button, Link } from "@mui/material";
+import {
+  Typography,
+  Grid,
+  Container,
+  Button,
+  Link,
+  TextField,
+} from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -10,7 +17,7 @@ import DraftsIcon from "@mui/icons-material/Drafts";
 const Footer = () => {
   return (
     <Container>
-      <Grid container spacing={4}>
+      <Grid container spacing={8}>
         <Grid item xs={12} md={3}>
           <Typography variant="h5" mb={2.5}>
             <strong>CAR </strong>
@@ -22,7 +29,7 @@ const Footer = () => {
           </Typography>
           <List>
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton sx={{ padding: 0 }}>
                 <ListItemIcon>
                   <CallIcon />
                 </ListItemIcon>
@@ -30,7 +37,7 @@ const Footer = () => {
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton sx={{ padding: 0 }}>
                 <ListItemIcon>
                   <DraftsIcon />
                 </ListItemIcon>
@@ -71,6 +78,47 @@ const Footer = () => {
               <ListItemButton sx={{ padding: 0 }}>
                 <ListItemText sx={{ padding: 0 }}>How we work</ListItemText>
               </ListItemButton>
+            </ListItem>
+          </List>
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <Typography variant="h5" fontWeight={"bold"} mb>
+            WORKING HOURS
+          </Typography>
+          <List>
+            <ListItem sx={{ p: 0 }}>
+              <Typography variant="subtitle1">
+                Mon - Fri: 9:00AM - 9:00PM
+              </Typography>
+            </ListItem>
+            <ListItem sx={{ p: 0 }}>
+              <Typography variant="subtitle1">Sat: 9:00AM - 19:00PM</Typography>
+            </ListItem>
+            <ListItem sx={{ p: 0 }}>
+              <Typography variant="subtitle1">Sun: Closed</Typography>
+            </ListItem>
+          </List>
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <Typography variant="h5" fontWeight={"bold"} mb>
+            SUBSCRIPTION
+          </Typography>
+          <List>
+            <ListItem sx={{ p: 0 }}>
+              <Typography variant="subtitle1">
+                Subscribe your Email address for latest news & updates.
+              </Typography>
+            </ListItem>
+            <ListItem sx={{ px: 0 }}>
+              <TextField
+                
+                variant="outlined"
+                label="Enter Email Address"
+                fullWidth
+              />
+            </ListItem>
+            <ListItem sx={{ p: 0 }}>
+              <Button variant="contained" size="large" fullWidth>SUBMIT</Button>
             </ListItem>
           </List>
         </Grid>

@@ -19,21 +19,31 @@ const Download = () => {
       container
       mb={10}
       paddingBottom={15}
-      sx={
-        {
-          // backgroundImage: `url("/images/banners/bg02.png")`,
-          // backgroundRepeat: "no-repeat",
-          // backgroundSize: "cover",
-          // backgroundPosition: "right",
-        }
-      }
+      sx={{
+        // backgroundImage: `url("/images/banners/bg02.png")`,
+        // backgroundRepeat: "no-repeat",
+        // backgroundSize: "cover",
+        // backgroundPosition: "right",
+        // backgroundImage: 'url("/images/banners/bg02.png")',
+        // backgroundColor: "gray",
+        // backgroundPosition: "top center",
+        // backgroundRepeat: "no-repeat",
+        // backgroundSize: "cover",
+        // width: "100%",
+        // height: "auto",
+        // padding: "10rem 0",
+      }}
     >
       <img
         src="/images/banners/bg02.png"
         style={{
           position: "absolute",
-          right: "-90px",
-          width: "90%",
+          // right: "-90px",
+          overflowX: "hidden",
+          overflowY: "hidden",
+          width: "92%",
+          height: "auto",
+          // backgroundColor: "gray",
           display: isMobileView ? "none" : "block",
           // top: "5%",
           zIndex: -1,

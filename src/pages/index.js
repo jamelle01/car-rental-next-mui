@@ -2,13 +2,16 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import ResponsiveAppBar from "@/components/Navbar";
-import Hero from "@/components/Hero";
+import Hero from "@/components/home/Hero";
 import { Container } from "@mui/material";
-import BookCar from "@/components/BookCar";
-import PlanTrip from "@/components/PlanTrip";
-import CarModels from "@/components/CarModels";
-import Banner from "@/components/Banner";
-import ChooseUs from "@/components/ChooseUs";
+import BookCar from "@/components/home/BookCar";
+import PlanTrip from "@/components/home/PlanTrip";
+import CarModels from "@/components/home/CarModels";
+import Banner from "@/components/home/Banner";
+import ChooseUs from "@/components/home/ChooseUs";
+import Reviews from "@/components/home/Reviews";
+import Faq from "@/components/home/Faq";
+import Download from "@/components/home/Download";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +30,9 @@ export default function Home() {
       <CarModels />
       <Banner />
       <ChooseUs />
+      <Reviews />
+      <Faq />
+      <Download />
     </Container>
   );
 }

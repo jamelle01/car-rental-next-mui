@@ -4,7 +4,7 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 const ChooseUs = () => {
   return (
     <Grid
-      mb={20}
+      mb={10}
       spacing={8}
       container
       sx={{ textAlign: { xs: "center", md: "left" } }}

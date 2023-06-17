@@ -13,6 +13,10 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
+import logo from "../../public/images/logo/logo1.png";
+// import { Image } from "@mui/icons-material";
+import Image from "next/image";
+
 const pages = [
   "Home",
   "About",
@@ -43,11 +47,30 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
+          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
+          {/* <img src={logo} alt="fjie"/> */}
+          {/* <Image
+            src={logo}
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+            alt="fjie"
+            width={100}
+            height={35}
+          /> */}
+          <Box
+            component={Image}
+            src={logo}
+            alt="fjie"
+            width={100}
+            height={35}
+            sx={{
+              display: { xs: "none", md: "flex" },
+              marginRight: 1,
+            }}
+          />
+          {/* <Typography
             variant="h6"
             noWrap
             component="a"
@@ -63,7 +86,7 @@ function ResponsiveAppBar() {
             }}
           >
             CAR Rental
-          </Typography>
+          </Typography> */}
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -101,8 +124,16 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
+          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
+          <Box
+            component={Image}
+            src={logo}
+            alt="fjie"
+            width={100}
+            height={35}
+            sx={{ display: { xs: "flex", md: "none" }, mr: 2 }}
+          />
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -119,7 +150,7 @@ function ResponsiveAppBar() {
             }}
           >
             LOGO
-          </Typography>
+          </Typography> */}
           <Box
             sx={{
               flexGrow: 1,

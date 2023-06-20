@@ -16,8 +16,8 @@ import DraftsIcon from "@mui/icons-material/Drafts";
 
 const Footer = () => {
   return (
-    <Container>
-      <Grid container spacing={8}>
+    <Container >
+      <Grid p paddingTop={15} container spacing={8}>
         <Grid item xs={12} md={3}>
           <Typography variant="h5" mb={2.5}>
             <strong>CAR </strong>

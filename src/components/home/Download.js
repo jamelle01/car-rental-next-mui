@@ -18,7 +18,6 @@ const Download = () => {
     <Grid
       container
       mb={10}
-      paddingBottom={15}
       sx={{
         // backgroundImage: `url("/images/banners/bg02.png")`,
         // backgroundRepeat: "no-repeat",
@@ -41,7 +40,7 @@ const Download = () => {
           // right: "-90px",
           overflowX: "hidden",
           overflowY: "hidden",
-          width: "92%",
+          width: "80%",
           height: "auto",
           // backgroundColor: "gray",
           display: isMobileView ? "none" : "block",

@@ -13,19 +13,32 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
+import logo from "../../public/images/logo/logo1.png";
+// import { Image } from "@mui/icons-material";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 const pages = [
-  "Home",
-  "About",
-  "Vehicle Models",
-  "Testemonials",
-  "Our Teams",
-  "Contact",
+  { key: "Home", value: "/" },
+  { key: "About", value: "/about" },
+  { key: "Vehicle Models", value: "/vehicle-models" },
+  { key: "Testimonials", value: "/testimonials" },
+  { key: "Our Teams", value: "/our-teams" },
+  { key: "Contact", value: "/contact" },
 ];
+
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const router = useRouter();
+
+  const handleNavigation = (page) => {
+    router.push(`/${page.toLowerCase()}`);
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -43,11 +56,30 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
+          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
+          {/* <img src={logo} alt="fjie"/> */}
+          {/* <Image
+            src={logo}
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+            alt="fjie"
+            width={100}
+            height={35}
+          /> */}
+          <Box
+            component={Image}
+            src={logo}
+            alt="fjie"
+            width={100}
+            height={35}
+            sx={{
+              display: { xs: "none", md: "flex" },
+              marginRight: 1,
+            }}
+          />
+          {/* <Typography
             variant="h6"
             noWrap
             component="a"
@@ -63,7 +95,7 @@ function ResponsiveAppBar() {
             }}
           >
             CAR Rental
-          </Typography>
+          </Typography> */}
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -95,14 +127,29 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.key} onClick={handleCloseNavMenu}>
+                  <Typography
+                    component="span"
+                    variant="body1"
+                    onClick={() => handleNavigation(page.value)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    {page.key}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
+          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
+          <Box
+            component={Image}
+            src={logo}
+            alt="fjie"
+            width={100}
+            height={35}
+            sx={{ display: { xs: "flex", md: "none" }, mr: 2 }}
+          />
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -119,7 +166,7 @@ function ResponsiveAppBar() {
             }}
           >
             LOGO
-          </Typography>
+          </Typography> */}
           <Box
             sx={{
               flexGrow: 1,
@@ -130,11 +177,14 @@ function ResponsiveAppBar() {
           >
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.key}
+                onClick={() => {
+                  handleCloseNavMenu();
+                  handleNavigation(page.value);
+                }}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                {page.key}
               </Button>
             ))}
           </Box>

@@ -16,20 +16,29 @@ import AdbIcon from "@mui/icons-material/Adb";
 import logo from "../../public/images/logo/logo1.png";
 // import { Image } from "@mui/icons-material";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const pages = [
-  "Home",
-  "About",
-  "Vehicle Models",
-  "Testemonials",
-  "Our Teams",
-  "Contact",
+  { key: "Home", value: "/" },
+  { key: "About", value: "/about" },
+  { key: "Vehicle Models", value: "/vehicle-models" },
+  { key: "Testimonials", value: "/testimonials" },
+  { key: "Our Teams", value: "/our-teams" },
+  { key: "Contact", value: "/contact" },
 ];
+
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const router = useRouter();
+
+  const handleNavigation = (page) => {
+    router.push(`/${page.toLowerCase()}`);
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -118,8 +127,15 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.key} onClick={handleCloseNavMenu}>
+                  <Typography
+                    component="span"
+                    variant="body1"
+                    onClick={() => handleNavigation(page.value)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    {page.key}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -161,11 +177,14 @@ function ResponsiveAppBar() {
           >
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.key}
+                onClick={() => {
+                  handleCloseNavMenu();
+                  handleNavigation(page.value);
+                }}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                {page.key}
               </Button>
             ))}
           </Box>

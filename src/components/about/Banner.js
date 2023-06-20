@@ -1,4 +1,6 @@
 import { Box, Typography } from "@mui/material";
+import CallIcon from "@mui/icons-material/Call";
+
 
 const Banner = () => {
   return (
@@ -10,20 +12,14 @@ const Banner = () => {
       mt={10}
     >
       <Typography
-        p
         color={"primary.contrastText"}
         fontWeight={"bolder"}
         align="center"
         variant="h2"
       >
-        Book a car by getting in touch with us (123) 456-7869<Typography component="span" color="primary.main">
-          24/7
-        </Typography>{" "}
-      </Typography>
-      <Typography color="primary.contrastText" align="center" variant="h5">
-        Top Airports. Local Suppliers.{" "}
-        
-        Support.
+        Book a car by getting in touch with us   <Typography fontWeight="bold" variant="h2" color="primary.main">
+        <CallIcon fontSize="" />  (123) 456-7869
+        </Typography> 
       </Typography>
     </Box>
   );

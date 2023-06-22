@@ -16,10 +16,20 @@ import DraftsIcon from "@mui/icons-material/Drafts";
 
 const Footer = () => {
   return (
-    <Container >
-      <Grid p paddingTop={15} container spacing={8}>
+    <Container>
+      <Grid
+        p
+        paddingTop={15}
+        container
+        spacing={8}
+        sx={{ textAlign: { xs: "center", lg: "left" } }}
+      >
         <Grid item xs={12} md={3}>
-          <Typography variant="h5" mb={2.5}>
+          <Typography
+            variant="h5"
+            mb={2.5}
+            sx={{ textAlign: { xs: "center", lg: "left" } }}
+          >
             <strong>CAR </strong>
             Rental
           </Typography>
@@ -36,12 +46,13 @@ const Footer = () => {
                 <ListItemText primary="(123) -456-789" />
               </ListItemButton>
             </ListItem>
+
             <ListItem disablePadding>
               <ListItemButton sx={{ padding: 0 }}>
                 <ListItemIcon>
                   <DraftsIcon />
                 </ListItemIcon>
-                <ListItemText primary=" carrental@gmail.com" />
+                <ListItemText primary="carrental@gmail.com" />
               </ListItemButton>
             </ListItem>
           </List>
@@ -53,30 +64,48 @@ const Footer = () => {
           <Typography variant="h5" fontWeight={"bold"} mb>
             COMPANY
           </Typography>
-          <List>
+          <List fullWidth>
             <ListItem sx={{ padding: 0 }}>
-              <ListItemButton sx={{ padding: 0 }}>
+              <ListItemButton
+                sx={{ padding: 0, textAlign: { xs: "center", lg: "left" } }}
+              >
                 <ListItemText sx={{ padding: 0 }}>New York</ListItemText>
               </ListItemButton>
             </ListItem>
             <ListItem sx={{ padding: 0 }}>
               <ListItemButton sx={{ padding: 0 }}>
-                <ListItemText sx={{ padding: 0 }}>Careers</ListItemText>
+                <ListItemText
+                  sx={{ padding: 0, textAlign: { xs: "center", lg: "left" } }}
+                >
+                  Careers
+                </ListItemText>
               </ListItemButton>
             </ListItem>
             <ListItem sx={{ padding: 0 }}>
               <ListItemButton sx={{ padding: 0 }}>
-                <ListItemText sx={{ padding: 0 }}>Mobile</ListItemText>
+                <ListItemText
+                  sx={{ padding: 0, textAlign: { xs: "center", lg: "left" } }}
+                >
+                  Mobile
+                </ListItemText>
               </ListItemButton>
             </ListItem>
             <ListItem sx={{ padding: 0 }}>
               <ListItemButton sx={{ padding: 0 }}>
-                <ListItemText sx={{ padding: 0 }}>Blog</ListItemText>
+                <ListItemText
+                  sx={{ padding: 0, textAlign: { xs: "center", lg: "left" } }}
+                >
+                  Blog
+                </ListItemText>
               </ListItemButton>
             </ListItem>
             <ListItem sx={{ padding: 0 }}>
               <ListItemButton sx={{ padding: 0 }}>
-                <ListItemText sx={{ padding: 0 }}>How we work</ListItemText>
+                <ListItemText
+                  sx={{ padding: 0, textAlign: { xs: "center", lg: "left" } }}
+                >
+                  How we work
+                </ListItemText>
               </ListItemButton>
             </ListItem>
           </List>
@@ -85,17 +114,32 @@ const Footer = () => {
           <Typography variant="h5" fontWeight={"bold"} mb>
             WORKING HOURS
           </Typography>
-          <List>
-            <ListItem sx={{ p: 0 }}>
-              <Typography variant="subtitle1">
+          <List fullWidth>
+            <ListItem sx={{ padding: 0 }}>
+              <Typography
+                variant="subtitle1"
+                sx={{ width: "100%", textAlign: { xs: "center", lg: "left" } }}
+              >
                 Mon - Fri: 9:00AM - 9:00PM
               </Typography>
             </ListItem>
-            <ListItem sx={{ p: 0 }}>
-              <Typography variant="subtitle1">Sat: 9:00AM - 19:00PM</Typography>
+            <ListItem sx={{ padding: 0 }}>
+              <ListItemText
+                primary="Sat: 9:00AM - 19:00PM"
+                primaryTypographyProps={{
+                  variant: "subtitle1",
+                }}
+                sx={{ width: "100%", textAlign: { xs: "center", lg: "left" } }}
+              />
             </ListItem>
-            <ListItem sx={{ p: 0 }}>
-              <Typography variant="subtitle1">Sun: Closed</Typography>
+            <ListItem sx={{ padding: 0 }}>
+              <ListItemText
+                primary="Sun: Closed"
+                primaryTypographyProps={{
+                  variant: "subtitle1",
+                }}
+                sx={{ width: "100%" , textAlign: { xs: "center", lg: "left" } }}
+              />
             </ListItem>
           </List>
         </Grid>
@@ -111,14 +155,15 @@ const Footer = () => {
             </ListItem>
             <ListItem sx={{ px: 0 }}>
               <TextField
-                
                 variant="outlined"
                 label="Enter Email Address"
                 fullWidth
               />
             </ListItem>
             <ListItem sx={{ p: 0 }}>
-              <Button variant="contained" size="large" fullWidth>SUBMIT</Button>
+              <Button variant="contained" size="large" fullWidth>
+                SUBMIT
+              </Button>
             </ListItem>
           </List>
         </Grid>

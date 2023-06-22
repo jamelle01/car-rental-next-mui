@@ -1,3 +1,7 @@
+Description: In this practice project, I developed a website from scratch using Next.js, a powerful React framework, and the Material-UI framework for designing the user interface.
+
+During the development process, I utilized the features and capabilities of Next.js to create a fast and efficient website. Next.js provides server-side rendering, routing, and other optimization techniques, resulting in improved performance and enhanced user experience.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

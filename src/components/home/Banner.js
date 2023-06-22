@@ -16,13 +16,13 @@ const Banner = () => {
         align="center"
         variant="h2"
       >
-        Book a car by getting in touch with us (123) 456-7869<Typography component="span" color="primary.main">
-          24/7
-        </Typography>{" "}
+        Save big with our cheap car rental!
       </Typography>
       <Typography color="primary.contrastText" align="center" variant="h5">
         Top Airports. Local Suppliers.{" "}
-        
+        <Typography component="span" variant="h5" color="primary.main">
+          24/7
+        </Typography>{" "}
         Support.
       </Typography>
     </Box>

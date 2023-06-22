@@ -2,11 +2,14 @@ import { Box, Grid, Typography } from "@mui/material";
 
 const AboutCompany = () => {
   return (
-    <Grid container p={10}>
-      <Grid item xs={6}>
-        <img src="/images/about/about-main.jpg" />
+    <Grid container spacing={4} sx={{ p: { xs: 2, md: 10 } }}>
+      <Grid item xs={12} md={6} py={4}>
+        <img
+          style={{ maxWidth: "100%", height: "auto" }}
+          src="/images/about/about-main.jpg"
+        />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         <Typography fontWeight={"bold"} variant="h6">
           About Company
         </Typography>
@@ -19,22 +22,66 @@ const AboutCompany = () => {
           Weeks quiet do vexed or whose. Motionless if no to affronting
           imprudence no precaution. My indulged as disposal strongly attended.
         </Typography>
-        <Grid container m={3}>
-          <Grid item xs={4}>
+        <Grid container spacing={3} p={3}>
+          <Grid
+            item
+            md={4}
+            xs={12}
+            sx={{
+              textAlign: { xs: "center" },
+              justifyContent: { xs: "center" },
+              alignItems: { xs: "center" },
+            }}
+          >
             <img src="/images/about/icon1.png" />
-            <Typography fontWeight={"bold"} variant="h3">20</Typography>
-            <Typography variant="body1">Car Types</Typography>
-            
+            <Typography fontWeight={"bold"} variant="h3">
+              20
+            </Typography>
+            <Typography variant="body1">
+              Car
+              <br />
+              Types
+            </Typography>
           </Grid>
-          <Grid item xs={4}>
+          <Grid
+            item
+            md={4}
+            xs={12}
+            sx={{
+              textAlign: { xs: "center" },
+              justifyContent: { xs: "center" },
+              alignItems: { xs: "center" },
+            }}
+          >
             <img src="/images/about/icon2.png" />
-            <Typography fontWeight={"bold"} variant="h3">85</Typography>
-            <Typography variant="body1">Rental Outlets</Typography>
+            <Typography fontWeight={"bold"} variant="h3">
+              85
+            </Typography>
+            <Typography variant="body1">
+              Rental
+              <br />
+              Outlets
+            </Typography>
           </Grid>
-          <Grid item xs={4}>
+          <Grid
+            item
+            md={4}
+            xs={12}
+            sx={{
+              textAlign: { xs: "center" },
+              justifyContent: { xs: "center" },
+              alignItems: { xs: "center" },
+            }}
+          >
             <img src="/images/about/icon3.png" />
-            <Typography fontWeight={"bold"} variant="h3">75</Typography>
-            <Typography variant="body1">Repair Shop</Typography>
+            <Typography fontWeight={"bold"} variant="h3">
+              75
+            </Typography>
+            <Typography variant="body1">
+              Repair
+              <br />
+              Shop
+            </Typography>
           </Grid>
         </Grid>
       </Grid>

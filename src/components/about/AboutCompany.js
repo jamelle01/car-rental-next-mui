@@ -3,12 +3,19 @@ import { Box, Grid, Typography } from "@mui/material";
 const AboutCompany = () => {
   return (
     <Grid container spacing={4} sx={{ p: { xs: 2, md: 10 } }}>
-      <Grid item xs={12} md={6} py={4}>
+      <Grid
+        item
+        xs={12}
+        md={6}
+        py={4}
+        sx={{ display: "flex", justifyContent: "center" }}
+      >
         <img
           style={{ maxWidth: "100%", height: "auto" }}
           src="/images/about/about-main.jpg"
         />
       </Grid>
+
       <Grid item xs={12} md={6}>
         <Typography
           sx={{ textAlign: { xs: "center", lg: "left" } }}
